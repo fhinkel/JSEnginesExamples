@@ -10,7 +10,7 @@ class Primes {
   int getPrime(int i) const { return primes[i]; }
   void push(int i) { primes[counter++] = i; }
 
-  bool isPrime(int n) {
+  bool isNotPrime(int n) {
     for (int i = 1; i < counter; ++i) {
       if ((n % primes[i]) == 0) return true;
     }
@@ -26,7 +26,7 @@ int main() {
   Primes p;
   int c = 1;
   while (p.getCounter() < 25000) {
-    if (!p.isPrime(c)) {
+    if (!p.isNotPrime(c)) {
       p.push(c);
     }
     c++;

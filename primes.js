@@ -9,7 +9,7 @@ function Primes() {
     this.primes[this.counter++] = i;
   }
 
-  this.isPrime = function(n) {
+  this.isNotPrime = function(n) {
     for (var i = 1; i < this.counter; ++i) {
       if ((n % this.primes[i]) == 0) return true;
     }
@@ -21,7 +21,7 @@ function main() {
   p = new Primes();
   var c = 1;
   while (p.getCounter() < 25000) {
-    if (!p.isPrime(c)) {
+    if (!p.isNotPrime(c)) {
       p.push(c);
     }
     c++;
